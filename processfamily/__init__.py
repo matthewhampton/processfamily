@@ -411,6 +411,8 @@ class ProcessFamily(object):
                 self.number_of_child_processes = self.cpu_count-1
             else:
                 self.number_of_child_processes = self.cpu_count
+        else:
+            self.number_of_child_processes = number_of_child_processes or 1
 
         self.child_processes = []
         self._child_process_group_id = None
